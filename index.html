@@ -58,7 +58,7 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button class="modal-btn" type="button">Заказать услугу</button>
+          <button class="modal-btn" type="button" data-modal-open>Заказать услугу</button>
         </div>
       </section>
 
@@ -121,6 +121,7 @@
           <h2 class="servises-title">Чем мы занимаемся</h2>
           <ul class="servises-list list">
             <li class="servises-item">
+              <div class="servises-box">
               <img
                 class="servises-photo"
                 src="./images/our_job_laptop.jpg"
@@ -128,24 +129,38 @@
                 width="370"
                 height="294"
               />
+              <div class="servises-thumb">
+                <p class="servises-description">Десктопные приложения</p>
+              </div> 
+            </div>
             </li>
             <li class="servises-item">
-              <img
+              <div class="servises-box">
+                <img
                 class="servises-photo"
                 src="./images/our_job_phone.jpg"
                 alt="синхронизирование с телефоном"
                 width="370"
                 height="294"
               />
+              <div class="servises-thumb">
+                <p class="servises-description">Мобильные приложения</p>
+              </div> 
+              </div>
             </li>
             <li class="servises-item">
-              <img
-                class="servises-photo"
-                src="./images/our_job_tablet.jpg"
-                alt="работа с планшетом"
-                width="370"
-                height="294"
-              />
+              <div class="servises-box">
+                <img
+                  class="servises-photo"
+                  src="./images/our_job_tablet.jpg"
+                  alt="работа с планшетом"
+                  width="370"
+                  height="294"
+                />
+                <div class="servises-thumb">
+                  <p class="servises-description">Дизайнерские решения</p>
+                </div> 
+              </div>  
             </li>
           </ul>
         </div>
@@ -430,5 +445,17 @@
         </div>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="close-btn" type="button" data-modal-close>
+        <svg class="close-icon" width="18" height="18">
+          <use href="./images/svg-sprite.svg#icon-close"></use>
+        </svg>
+      </button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
